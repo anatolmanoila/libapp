@@ -28,4 +28,5 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'strong_parameters'
 

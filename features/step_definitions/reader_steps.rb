@@ -1,4 +1,4 @@
-Given(/^I am a guest$/) do
+ Given(/^I am a guest$/) do
 end
 
 When(/^I fill the register form with valid data$/) do
@@ -9,9 +9,9 @@ When(/^I fill the register form with valid data$/) do
     click_button "Register"
 end
 
-# Then(/^I should be registered in app$/) do
-#   pending # express the regexp above with the code you wish you had
-# end
+Then(/^I should be registered in app$/) do
+    expect(Reader.find_by_email("reader01@mail.com")).not_to be_nil
+end
 
 # Then(/^I should be logged in$/) do
 #   pending # express the regexp above with the code you wish you had
